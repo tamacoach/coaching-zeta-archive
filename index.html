@@ -179,6 +179,27 @@
     .sidebar .app-name-link:hover {
       text-decoration: none;
     }
+
+    /* PDF iframe 모바일 반응형 */
+    @media screen and (max-width: 768px) {
+      .markdown-section iframe[src*=".pdf"] {
+        display: none;
+      }
+
+      /* 모바일에서 다운로드 링크 강조 */
+      .markdown-section a[href*=".pdf"] {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white !important;
+        padding: 15px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 20px 0;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+    }
   </style>
 </head>
 <body>
