@@ -183,21 +183,28 @@
     /* PDF iframe 모바일 반응형 */
     @media screen and (max-width: 768px) {
       .markdown-section iframe[src*=".pdf"] {
-        display: none;
+        display: none !important;
       }
 
       /* 모바일에서 다운로드 링크 강조 */
       .markdown-section a[href*=".pdf"] {
-        display: inline-block;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: block !important;
+        width: 90% !important;
+        max-width: 400px !important;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
         color: white !important;
-        padding: 15px 30px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        margin: 20px 0;
-        text-align: center;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        padding: 20px 30px !important;
+        border-radius: 12px !important;
+        text-decoration: none !important;
+        font-weight: bold !important;
+        font-size: 1.1em !important;
+        margin: 20px auto !important;
+        text-align: center !important;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+      }
+
+      .markdown-section a[href*=".pdf"]:before {
+        content: "📱 ";
       }
     }
   </style>
