@@ -199,8 +199,9 @@
       text-decoration: underline;
     }
 
-    /* 모바일에서 PDF iframe 숨기고 다운로드 버튼 강조 */
+    /* 모바일에서 PDF iframe만 숨기고 다운로드 버튼 강조 */
     @media screen and (max-width: 768px) {
+      /* PDF 컨테이너만 숨김 - YouTube iframe은 유지 */
       .pdf-container {
         display: none !important;
       }
@@ -224,6 +225,19 @@
 
       .pdf-download-link a:hover {
         text-decoration: none !important;
+      }
+
+      /* 모바일에서 이미지 반응형 */
+      .markdown-section img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* YouTube iframe 모바일 반응형 */
+      .markdown-section iframe[src*="youtube.com"] {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
       }
     }
   </style>
