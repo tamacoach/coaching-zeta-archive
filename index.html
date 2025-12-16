@@ -180,31 +180,50 @@
       text-decoration: none;
     }
 
-    /* PDF iframe 모바일 반응형 */
+    /* PDF 컨테이너 스타일 */
+    .pdf-container {
+      margin: 20px 0;
+    }
+
+    .pdf-download-link {
+      margin: 15px 0;
+    }
+
+    .pdf-download-link a {
+      color: #4A90E2;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .pdf-download-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* 모바일에서 PDF iframe 숨기고 다운로드 버튼 강조 */
     @media screen and (max-width: 768px) {
-      .markdown-section iframe[src*=".pdf"] {
+      .pdf-container {
         display: none !important;
       }
 
-      /* 모바일에서 다운로드 링크 강조 */
-      .markdown-section a[href*=".pdf"] {
-        display: block !important;
-        width: 90% !important;
-        max-width: 400px !important;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-        color: white !important;
-        padding: 20px 30px !important;
-        border-radius: 12px !important;
-        text-decoration: none !important;
-        font-weight: bold !important;
-        font-size: 1.1em !important;
-        margin: 20px auto !important;
-        text-align: center !important;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+      .pdf-download-link {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        margin: 20px 0;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
       }
 
-      .markdown-section a[href*=".pdf"]:before {
-        content: "📱 ";
+      .pdf-download-link a {
+        color: white !important;
+        font-size: 1.2em;
+        font-weight: bold;
+        display: block;
+        text-decoration: none !important;
+      }
+
+      .pdf-download-link a:hover {
+        text-decoration: none !important;
       }
     }
   </style>
