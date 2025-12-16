@@ -1,5 +1,5 @@
 - 🏠 홈
-  - 📅 [Re:set 2026 모임](/lectures/2025-08-30-donghe-ai)
+  - [● Re:set 2026 모임&nbsp;&nbsp;25/12/13](/lectures/2025-12-13-reset2026)
 
-- ℹ️ 정보
-  - [문의하기](/about/contact)
+- 정보
+  - [📱 문의하기](/about/contact)

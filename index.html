@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="코칭제타 행사 아카이브">
+  <meta name="description" content="코칭제타 행사 아카이브 - Re:set 2026">
   <title>코칭제타 행사 아카이브</title>
   <link rel="icon" href="_media/favicon.ico">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
@@ -180,13 +180,21 @@
       text-decoration: none;
     }
 
-    /* PDF 컨테이너 스타일 */
+    /* PDF 컨테이너 스타일 - 데스크톱에서 기본 표시 */
     .pdf-container {
+      display: block !important;
       margin: 20px 0;
+    }
+
+    .pdf-container iframe {
+      display: block !important;
+      width: 100%;
+      min-height: 600px;
     }
 
     .pdf-download-link {
       margin: 15px 0;
+      display: none; /* 데스크톱에서는 숨김 */
     }
 
     .pdf-download-link a {
@@ -199,11 +207,16 @@
       text-decoration: underline;
     }
 
-    /* 모바일에서 PDF iframe만 숨기고 다운로드 버튼 강조 */
+    /* 모바일에서만 PDF iframe 숨기고 다운로드 버튼 표시 */
     @media screen and (max-width: 768px) {
-      /* PDF 컨테이너만 숨김 - YouTube iframe은 유지 */
+      /* PDF 컨테이너 숨김 - YouTube iframe은 유지 */
       .pdf-container {
         display: none !important;
+      }
+
+      /* 다운로드 링크 표시 및 강조 */
+      .pdf-download-link {
+        display: block !important;
       }
 
       .pdf-download-link {

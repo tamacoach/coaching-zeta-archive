@@ -1,21 +1,24 @@
-# 🚀 동해시 AI 강연 아카이브 - 사용 가이드
+# 🚀 코칭제타 행사 아카이브 - 사용 가이드
 
 ## 📦 포함된 파일
 
 ```
-donghe-ai-lecture/
+coachingjetta_work_space/
 ├── index.html              # 메인 설정 파일
 ├── README.md               # 홈페이지
 ├── _sidebar.md             # 사이드바 메뉴
 ├── .nojekyll              # GitHub Pages 설정
-├── lectures/               # 강연 기록
-│   └── 2025-08-30-donghe-ai.md
+├── _media/                 # 프로필 이미지
+│   ├── profile.jpg
+│   └── profile.png
+├── lectures/               # 행사 기록
+│   └── 2025-12-13-reset2026.md
 ├── archive/                # 아카이브
 │   └── all-lectures.md
 ├── about/                  # 소개
 │   ├── intro.md
 │   └── contact.md
-└── images/                 # 이미지 폴더 (사용자가 추가)
+└── images/                 # 이미지 폴더 (행사 사진, 자료 등)
 ```
 
 ---
@@ -25,7 +28,7 @@ donghe-ai-lecture/
 ### 방법 1: Python 서버
 
 ```bash
-cd donghe-ai-lecture
+cd coachingjetta_work_space
 python -m http.server 3000
 ```
 
@@ -41,7 +44,7 @@ python -m http.server 3000
 
 ```bash
 npm i docsify-cli -g
-docsify serve donghe-ai-lecture
+docsify serve coachingjetta_work_space
 ```
 
 ---
@@ -51,16 +54,16 @@ docsify serve donghe-ai-lecture
 ### 1. GitHub 저장소 만들기
 
 ```bash
-cd donghe-ai-lecture
+cd coachingjetta_work_space
 git init
 git add .
-git commit -m "초기 커밋: 동해시 AI 강연 아카이브"
+git commit -m "초기 커밋: 코칭제타 행사 아카이브"
 ```
 
 ### 2. GitHub에 푸시
 
 ```bash
-git remote add origin https://github.com/YOUR_USERNAME/donghe-ai-archive.git
+git remote add origin https://github.com/YOUR_USERNAME/coachingjetta-archive.git
 git branch -M main
 git push -u origin main
 ```
@@ -72,19 +75,19 @@ git push -u origin main
 3. Source: main 브랜치 선택
 4. Save!
 
-5분 후 `https://YOUR_USERNAME.github.io/donghe-ai-archive/` 에서 확인!
+5분 후 `https://YOUR_USERNAME.github.io/coachingjetta-archive/` 에서 확인!
 
 ---
 
-## ✏️ 새 강연 추가하기
+## ✏️ 새 행사 추가하기
 
 ### 1. 새 마크다운 파일 생성
 
-`lectures/2025-XX-XX-new-lecture.md` 파일 생성
+`lectures/2025-XX-XX-new-event.md` 파일 생성
 
 ### 2. 내용 작성
 
-기존 `2025-08-30-donghe-ai.md` 파일을 복사해서 수정하세요!
+기존 `2025-12-13-reset2026.md` 파일을 복사해서 수정하세요!
 
 ### 3. 사이드바 업데이트
 
@@ -92,13 +95,17 @@ git push -u origin main
 
 ```markdown
 - 📅 2025년
-  - [08-30 동해시 AI 강연](/lectures/2025-08-30-donghe-ai)
-  - [XX-XX 새 강연](/lectures/2025-XX-XX-new-lecture)  ← 추가
+  - [12-13 Re:set 2026](/lectures/2025-12-13-reset2026)
+  - [XX-XX 새 행사](/lectures/2025-XX-XX-new-event)  ← 추가
 ```
 
-### 4. 홈페이지 업데이트
+### 4. 아카이브 업데이트
 
-`README.md`의 "최근 강연" 섹션 업데이트
+`archive/all-lectures.md`에 새 행사 추가
+
+### 5. 홈페이지 업데이트
+
+`README.md`의 "최근 행사" 섹션 업데이트
 
 ---
 
@@ -144,10 +151,11 @@ git push -u origin main
 }
 ```
 
-### 로고 추가
+### 프로필 이미지 변경
 
-1. `_media/logo.png` 파일 추가
-2. `index.html`에서 자동으로 표시됨
+1. `_media/` 폴더에 원하는 이미지 추가
+2. `index.html`에서 이미지 경로 수정
+   - 현재: `_media/profile.jpg` 또는 `_media/profile.png`
 
 ### 테마 변경
 
@@ -228,7 +236,7 @@ A: 브라우저 캐시를 지우고 다시 시도하세요
 현재 placeholder 이미지를 실제 사진으로 교체하세요
 
 ### 2. 커스텀 도메인 연결
-`tuk.me` 같은 도메인 연결 가능
+원하는 도메인을 GitHub Pages에 연결 가능
 
 ### 3. Google Analytics 추가
 방문자 통계 추적
